@@ -1,0 +1,9 @@
+Package: ch.xxtou.xxthavocspoof
+Name: XXTHavocSpoof
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Spoof Havoc authentication for XXTouch Explorer.
+Maintainer: Antigravity
+Author: Antigravity
+Section: Tweaks
