@@ -3,7 +3,7 @@ name: Build XXTouch Tweak
 on:
   push:
     paths:
-      - 'Payload/ADManager.app/XXT_Tweak/**'
+      - 'XXT_Tweak/**'
       - 'build_xxt.yml'
   workflow_dispatch:
 
@@ -34,7 +34,7 @@ jobs:
       - name: Build Tweak
         run: |
           export THEOS=$HOME/theos
-          cd Payload/ADManager.app/XXT_Tweak
+          cd XXT_Tweak
           make FINALPACKAGE=1
         env:
           THEOS: ${{ env.THEOS }}
@@ -43,4 +43,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: XXTHavocSpoof-Dylib
-          path: Payload/ADManager.app/XXT_Tweak/.theos/obj/arm64/XXTHavocSpoof.dylib
+          path: XXT_Tweak/.theos/obj/arm64/XXTHavocSpoof.dylib
